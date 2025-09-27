@@ -1,15 +1,12 @@
-import { Text, View } from "react-native";
+import { NextDoseCard } from "@/components/index/nextDoseCard";
+import { WelcomeCard } from "@/components/index/welcomeCard";
+import { ScrollView } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Hello world</Text>
-    </View>
+    <ScrollView style={{ backgroundColor: "#0000bb" }}>
+      <WelcomeCard />
+      <NextDoseCard />
+    </ScrollView>
   );
 }

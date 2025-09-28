@@ -24,12 +24,13 @@ export const WelcomeCard = (/* Props will go here when I do state management. Lo
         color: "#fefefe",
         textShadowColor: "#111",
         textShadowRadius: 2
-      }}>Hey Hey Madison!</Text>
+      }}>
+        Hey Hey {"{Name}"}!</Text>
       <Text style={{
         color: "#fefefe",
         textShadowColor: "#111",
         textShadowRadius: 2
-      }}>You've been going great this month! 4/4 doses taken! Keep up the great work girly! this is an improvement of 25% from last month</Text>
+      }}>You've been going great this month! {"{Taken Doses/MonthlyDoses}"} doses taken! Keep up the great work girly! this is an improvement of {"{N%}"} from last month</Text>
     </View>
   </View>
 }

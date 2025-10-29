@@ -14,45 +14,50 @@
     "typecheck": "tsc --noEmit"
   },
   "jest": {
-    "preset": "react-native",
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ],
-    "testMatch": [
-      "**/tests/**/*.[jt]s?(x)",
-      "**/?(*.)+(spec|test).[jt]s?(x)"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(react-native|@react-native|@react-navigation|@react-native-community|react-native-vector-icons)/)"
-    ],
-    "collectCoverageFrom": [
-      "**/*.{js,jsx,ts,tsx}",
-      "!**/coverage/**",
-      "!**/node_modules/**",
-      "!**/tests/**",
-      "!**/*.config.js",
-      "!**/metro.config.js",
-      "!**/babel.config.js"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/tests/",
-      "\\.config\\.js$"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/android/",
-      "/ios/"
-    ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/$1"
+    "jest": {
+      "preset": "react-native",
+      "setupFilesAfterEnv": [
+        "@testing-library/jest-native/extend-expect"
+      ],
+      "testMatch": [
+        "**/tests/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json"
+      ],
+      "transform": {
+        "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+      },
+      "transformIgnorePatterns": [
+        "node_modules/(?!(react-native|@react-native|@react-navigation|@react-native-community|react-native-vector-icons)/)"
+      ],
+      "collectCoverageFrom": [
+        "**/*.{js,jsx,ts,tsx}",
+        "!**/coverage/**",
+        "!**/node_modules/**",
+        "!**/tests/**",
+        "!**/*.config.js",
+        "!**/metro.config.js",
+        "!**/babel.config.js"
+      ],
+      "coveragePathIgnorePatterns": [
+        "/node_modules/",
+        "/tests/",
+        "\\.config\\.js$"
+      ],
+      "testPathIgnorePatterns": [
+        "/node_modules/",
+        "/android/",
+        "/ios/"
+      ],
+      "moduleNameMapper": {
+        "^@/(.*)$": "<rootDir>/$1"
+      }
     }
   },
   "dependencies": {
@@ -84,9 +89,14 @@
     "react-native-worklets": "0.6.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@react-native/babel-preset": "^0.82.1",
     "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^13.3.3",
     "@types/react": "~19.2.2",
+    "babel-jest": "^30.2.0",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~10.0.0",
     "jest": "^30.2.0",

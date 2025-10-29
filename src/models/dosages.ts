@@ -14,19 +14,19 @@ type Dosage = {
   updatedAt: Date;
 }
 
-interface DosageFrequency {
+type DosageFrequency = {
   type: 'daily' | 'weekly' | 'biweekly' | 'monthly' | 'custom';
   times: TimeSlot[];
   daysOfWeek?: number[];
   customInterval?: number;
 }
 
-interface TimeSlot {
+type TimeSlot = {
   hour: number;
   minute: number;
 }
 
-interface Dose {
+type Dose = {
   id: string;
   userId: string;
   dosageId: string;
@@ -36,4 +36,10 @@ interface Dose {
   notes?: string;
   createdAt: Date;
   updatedAt: Date;
+}
+export type {
+  Dosage,
+  DosageFrequency,
+  TimeSlot,
+  Dose
 }

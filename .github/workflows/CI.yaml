@@ -46,7 +46,7 @@ jobs:
         working-directory: ./src
 
       - name: Run tests
-        run: npm test
+        run: npm test -- --coverage --watchAll=false
         working-directory: ./src
 
       - name: Upload coverage reports

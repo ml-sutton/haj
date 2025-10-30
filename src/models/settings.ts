@@ -12,30 +12,20 @@ type NotificationSettings = {
   discreteNotifications: boolean;
 }
 type DisplaySettings = {
-  theme: 'light' | 'dark' | 'system';
+  theme: 'light' | 'dark' | 'dark solarized' | 'high-contrast dark' | 'system';
   discreteMode: boolean;
 }
 type AccessibilitySettings = {
   fontSize: 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
   fontWeight: 'normal' | 'medium' | 'bold';
   highContrast: boolean;
-  reduceTransparency: boolean;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia' | 'monochrome';
-
+  reduceTransparency: boolean;
   reduceMotion: boolean;
   disableAnimations: boolean;
-
-  screenReaderOptimized: boolean;
-  verboseDescriptions: boolean;
-  announceNotifications: boolean;
-
-  hapticFeedback: boolean;
+  dyslexiaFont: boolean;
   buttonSize: 'default' | 'large' | 'x-large';
 
-  dyslexiaFont: boolean;
-  increaseLineSpacing: boolean;
-  increaseLetterSpacing: boolean;
-  textAlign: 'left' | 'center' | 'justify';
 
 }
 export type {

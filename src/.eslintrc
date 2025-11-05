@@ -1,0 +1,4 @@
+{
+  "plugins": ["react-native-a11y"],
+  "extends": ["plugin:react-native-a11y/all"]
+}

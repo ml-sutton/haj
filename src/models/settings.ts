@@ -16,17 +16,9 @@ type DisplaySettings = {
   discreteMode: boolean;
 }
 type AccessibilitySettings = {
-  fontSize: 'small' | 'medium' | 'large' | 'x-large' | 'xx-large';
-  fontWeight: 'normal' | 'medium' | 'bold';
   highContrast: boolean;
-  colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia' | 'monochrome';
-  reduceTransparency: boolean;
+  hapticFeedback: boolean;
   reduceMotion: boolean;
-  disableAnimations: boolean;
-  dyslexiaFont: boolean;
-  buttonSize: 'default' | 'large' | 'x-large';
-
-
 }
 export type {
   AccessibilitySettings,

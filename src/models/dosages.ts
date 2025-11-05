@@ -1,35 +1,17 @@
 type Dosage = {
-  id: string;
-  userId: string;
   medicationName: string;
-  medicationType: 'hormone' | 'blocker' | 'other';
+  medicationType: 'hormone' | 'blocker';
   dosageAmount: number;
-  dosageUnit: 'mg' | 'ml' | 'mcg' | 'IU';
+  dosageUnit: 'mg' | 'ml' ;
   route: 'oral' | 'injection' | 'transdermal' | 'sublingual' | 'other';
-  frequency: DosageFrequency;
-
   isActive: boolean;
   notes?: string;
   createdAt: Date;
   updatedAt: Date;
-}
-
-type DosageFrequency = {
-  type: 'daily' | 'weekly' | 'biweekly' | 'monthly' | 'custom';
-  times: TimeSlot[];
-  daysOfWeek?: number[];
-  customInterval?: number;
-}
-
-type TimeSlot = {
-  hour: number;
-  minute: number;
+  doses: Dose[];
 }
 
 type Dose = {
-  id: string;
-  userId: string;
-  dosageId: string;
   scheduledTime: Date;
   status: 'scheduled' | 'taken' | 'missed' | 'skipped';
   takenAt?: Date;
@@ -39,7 +21,5 @@ type Dose = {
 }
 export type {
   Dosage,
-  DosageFrequency,
-  TimeSlot,
   Dose
 }

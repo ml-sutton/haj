@@ -12,7 +12,7 @@ type NotificationSettings = {
   discreteNotifications: boolean;
 }
 type DisplaySettings = {
-  theme: 'light' | 'dark' | 'dark solarized' | 'high-contrast dark' | 'system';
+  theme: 'light' | 'dark' | 'dark-solarized' | 'hc-dark' | 'light-solarized' | 'hc-light' | 'system';
   discreteMode: boolean;
 }
 type AccessibilitySettings = {
